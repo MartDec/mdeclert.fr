@@ -3,8 +3,8 @@ FROM ubuntu:20.04
 ARG user=martin
 ARG uid=1000
 
-EXPOSE 80/tcp
-EXPOSE 80/udp
+EXPOSE 8000/tcp
+EXPOSE 8000/udp
 
 RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf \
 && echo "nameserver 8.8.4.4" >> /etc/resolv.conf
