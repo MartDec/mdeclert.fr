@@ -1,6 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
-const PORT = 8000
+const PORT = process.env.PORT
 
 const Router = require('./router')
 
@@ -12,8 +13,9 @@ class Server {
     }
 
     init () {
-        this.server.set('views', __dirname + '/www')
-        this.server.use(express.static(path.join(__dirname, 'www')))
+        this.server.use(express.static('www'))
+        this.server.set('views', __dirname + '/www/views')
+        this.server.use(express.static(path.join(__dirname, 'www/views')))
 
         this.server.use('/', this.router.listen())
 
