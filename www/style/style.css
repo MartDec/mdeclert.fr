@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oxygen+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxygen Mono';
+}
+
+body {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Hammersmith One';
+}
+
+header, section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
