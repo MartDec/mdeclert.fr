@@ -89,12 +89,16 @@ header {
 }
 .home-page header nav a {
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 .home-page header nav a:not(:last-child) {
   margin-right: 2rem;
 }
 .home-page header nav a.current {
   text-decoration: underline;
+}
+.home-page header nav a:hover {
+  color: #0A5797;
 }
 .home-page .hello-section {
   background-image: url("/assets/backgrounds/hello-world-bg.jpg");
@@ -103,10 +107,15 @@ header {
 }
 .home-page .hello-section .content {
   width: 700px;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
-.home-page .hello-section .content .paragraph:last-child {
+.home-page .hello-section .content .paragraph {
   margin-top: 1rem;
+}
+.home-page .hello-section .content a {
+  margin-top: 1rem;
+  color: #0A5797;
+  display: block;
 }
 .home-page .skills-section {
   height: 346px;
