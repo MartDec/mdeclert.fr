@@ -14,8 +14,9 @@ class Server {
 
     init () {
         this.server.use(express.static('www'))
-        this.server.set('views', __dirname + '/www/views')
-        this.server.use(express.static(path.join(__dirname, 'www/views')))
+        this.server.set('view engine', 'ejs');
+        this.server.set('views', __dirname + '/www')
+        this.server.use(express.static(path.join(__dirname, 'www')))
 
         this.server.use('/', this.router.listen())
 

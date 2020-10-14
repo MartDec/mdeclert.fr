@@ -5,7 +5,7 @@ class Router {
 
     home () {
         this.router.get('/', async (req, res) => {
-            return res.sendFile('views/index.html')
+            return res.render('views/base', {template: 'home'})
         })
     }
 
