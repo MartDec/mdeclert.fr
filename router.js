@@ -5,6 +5,9 @@ class Router {
 
     home () {
         this.router.get('/', async (req, res) => {
+            return res.redirect('/hello')
+        })
+        this.router.get('/hello', async (req, res) => {
             return res.render('views/base', {template: 'home'})
         })
     }
