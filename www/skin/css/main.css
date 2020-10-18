@@ -39,66 +39,76 @@ header {
   height: 686px;
 }
 
-.home-page header .flex-wrapper {
+footer {
+  margin-top: 4rem;
+  background: #202020;
+  text-align: center;
+  padding: 2rem;
+}
+
+header .flex-wrapper {
   display: grid;
   grid-template-columns: 101px 9fr;
   column-gap: 1rem;
   height: 100%;
 }
-.home-page header .flex-wrapper .content {
+header .flex-wrapper .content {
   width: calc(100% - (111px));
   height: calc(100% - 3rem);
-  background: url("/assets/backgrounds/primary-bg.jpg");
 }
-.home-page header .flex-wrapper .content .links {
+header .flex-wrapper .content .links {
   display: flex;
   justify-content: center;
   margin-top: 8%;
 }
-.home-page header .flex-wrapper .content .links img {
+header .flex-wrapper .content .links img {
   width: 2rem;
 }
-.home-page header .flex-wrapper .content .links .separator {
+header .flex-wrapper .content .links .separator {
   width: 7rem;
   height: 1px;
   background: #EBEBEB;
   margin: 0 2rem;
   align-self: center;
 }
-.home-page header h1 {
+header h1 {
   margin-bottom: 1rem;
   letter-spacing: 10px;
   font-size: 2.5rem;
 }
-.home-page header h2 {
+header h2 {
   padding-top: 15%;
 }
-.home-page header h2 span {
+header h2 span {
   display: block;
   text-align: center;
 }
-.home-page header > img {
+header > img {
   position: absolute;
   bottom: -7rem;
   right: 0;
 }
-.home-page header nav {
+header nav {
   position: absolute;
   right: calc(111px);
   bottom: -3rem;
 }
-.home-page header nav a {
+header nav a {
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
-.home-page header nav a:not(:last-child) {
+header nav a:not(:last-child) {
   margin-right: 2rem;
 }
-.home-page header nav a.current {
-  text-decoration: underline;
-}
-.home-page header nav a:hover {
+header nav a:hover {
   color: #0A5797;
+}
+
+.home-page header .content {
+  background: url("/assets/backgrounds/primary-bg.jpg");
+}
+.home-page header nav .home-link {
+  text-decoration: underline;
 }
 .home-page .hello-section {
   background-image: url("/assets/backgrounds/hello-world-bg.jpg");
@@ -147,11 +157,36 @@ header {
   text-align: center;
   margin-top: 1rem;
 }
-.home-page footer {
-  margin-top: 4rem;
-  background: #202020;
-  text-align: center;
-  padding: 2rem;
+
+.resume-page header .content {
+  background: url("/assets/backgrounds/resume-bg.jpg");
+  background-size: cover;
+}
+.resume-page header nav .resume-link {
+  text-decoration: underline;
+}
+.resume-page .pro-section .content {
+  margin-top: 1rem;
+  background-image: url("/assets/backgrounds/professional-path-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.resume-page .pro-section .content .experience {
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+.resume-page .pro-section .content .experience .period {
+  font-family: "Hammersmith One";
+}
+.resume-page .school-section .content {
+  margin-top: 1rem;
+}
+.resume-page .school-section .content .school {
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+.resume-page .school-section .content .school .period {
+  font-family: "Hammersmith One";
 }
 
 /*# sourceMappingURL=main.css.map */

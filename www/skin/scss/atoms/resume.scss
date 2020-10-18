@@ -1,0 +1,45 @@
+.resume-page {
+    header {
+        .content {
+            background: url('/assets/backgrounds/resume-bg.jpg');
+            background-size: cover;
+        }
+
+        nav .resume-link {
+            text-decoration: underline;
+        }
+    }
+
+    .pro-section {
+        .content {
+            margin-top: 1rem;
+            background-image: url('/assets/backgrounds/professional-path-bg.jpg');
+            background-repeat: no-repeat;
+            background-position: right;
+
+            .experience {
+                margin-bottom: 2rem;
+                max-width: 700px;
+
+                .period {
+                    font-family: 'Hammersmith One';
+                }
+            }
+        }
+    }
+
+    .school-section {
+        .content {
+            margin-top: 1rem;
+
+            .school {
+                margin-bottom: 1.5rem;
+                max-width: 700px;
+
+                .period {
+                    font-family: 'Hammersmith One';
+                }
+            }
+        }
+    }
+}

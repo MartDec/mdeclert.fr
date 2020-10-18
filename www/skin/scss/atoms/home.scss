@@ -1,78 +1,11 @@
 .home-page {
     header {
-        .flex-wrapper {
-            display: grid;
-            grid-template-columns: 101px 9fr;
-            column-gap: 1rem;
-            height: 100%;
-
-            .content {
-                width: calc(100% - (111px));
-                height: calc(100% - 3rem);
-                background: url('/assets/backgrounds/primary-bg.jpg');
-                
-                .links {
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 8%;
-
-                    img {
-                        width: 2rem;
-                    }
-
-                    .separator {
-                        width: 7rem;
-                        height: 1px;
-                        background: #EBEBEB;
-                        margin: 0 2rem;
-                        align-self: center;
-                    }
-                }
-            }
+        .content {
+            background: url('/assets/backgrounds/primary-bg.jpg');
         }
 
-        h1 {
-            margin-bottom: 1rem;
-            letter-spacing: 10px;
-            font-size: 2.5rem;
-        }
-
-        h2 {
-            padding-top: 15%;
-
-            span {
-                display: block;
-                text-align: center;
-            }            
-        }
-
-        & > img {
-            position: absolute;
-            bottom: -7rem;
-            right: 0;
-        }
-
-        nav {
-            position: absolute;
-            right: calc(111px);
-            bottom: -3rem;
-
-            a {
-                text-decoration: none;
-                transition: all .3s ease;
-
-                &:not(:last-child) {
-                    margin-right: 2rem;
-                }
-
-                &.current {
-                    text-decoration: underline;
-                }
-
-                &:hover {
-                    color: #0A5797;
-                }
-            }
+        nav .home-link {
+            text-decoration: underline;
         }
     }
     
@@ -131,12 +64,5 @@
                 }
             }
         }
-    }
-    
-    footer {
-        margin-top: 4rem;
-        background: #202020;
-        text-align: center;
-        padding: 2rem;
     }
 }

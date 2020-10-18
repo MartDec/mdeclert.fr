@@ -9,8 +9,16 @@ class Router {
         })
     }
 
+    resume () {
+        this.router.get('/resume', async (req, res) => {
+            return res.render('views/base', {template: 'resume'})
+        })
+    }
+
     listen () {
         this.home()
+        this.resume()
+
         return this.router
     }
 }

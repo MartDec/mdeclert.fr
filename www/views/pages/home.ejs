@@ -1,34 +1,8 @@
 <header>
-    <div class="flex-wrapper">
-        <div class="left">
-            <img src="assets/icons/logo.svg" alt="DEC logo">
-        </div>
-        <div class="right">
-            <h1>Martin Déclert</h1>
-            <div class="content">
-                <h2>
-                    <span class="white">Développement Web Back-end</span>
-                    <span class="white">PHP - Node.js</span>
-                </h2>
-                <div class="links">
-                    <a href="#gitlab">
-                        <img src="assets/icons/gitlab.svg" alt="gitlab">
-                    </a>
-                    <span class="separator"></span>
-                    <a href="#linkedin">
-                        <img src="assets/icons/linkedin.svg" alt="linkedin">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="assets/icons/secondary-logo.svg" alt="">
-    <nav>
-        <a href="#home" class="selected current">home</a>
-        <a href="#projects">projects</a>
-        <a href="#resume">resume</a>
-        <a href="#contact">contact</a>
-    </nav>
+    <%- include('parts/header', {
+        upperTitle: 'Développement Web Back-end',
+        downTitle: 'PHP - Node.js'
+    }) -%>
 </header>
 <section class="hello-section">
     <h3>Hello World!</h3>
@@ -48,7 +22,6 @@
             Etiam fermentum
             felis sit amet nulla scelerisque, ut fermentum nulla semper.
         </div>
-        <a href="#projects">voir mes projets</a>
     </div>
 </section>
 <section class="skills-section">
@@ -102,6 +75,3 @@
         </div>
     </div>
 </section>
-<footer>
-    <span class="white">Copyright - Martin Déclert - 2020</span>
-</footer>
