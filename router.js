@@ -8,19 +8,26 @@ class Router {
             return res.redirect('/hello')
         })
         this.router.get('/hello', async (req, res) => {
-            return res.render('views/base', {template: 'home'})
+            return res.render('views/base', { template: 'home' })
         })
     }
 
     resume () {
         this.router.get('/resume', async (req, res) => {
-            return res.render('views/base', {template: 'resume'})
+            return res.render('views/base', { template: 'resume' })
+        })
+    }
+
+    contact () {
+        this.router.get('/contact', async (req, res) => {
+            return res.render('views/base', { template: 'contact' })
         })
     }
 
     listen () {
         this.home()
         this.resume()
+        this.contact()
 
         return this.router
     }

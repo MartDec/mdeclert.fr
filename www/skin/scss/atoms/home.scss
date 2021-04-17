@@ -8,7 +8,7 @@
             text-decoration: underline;
         }
     }
-    
+
     .hello-section {
         background-image: url('/assets/backgrounds/hello-world-bg.jpg');
         background-repeat: no-repeat;
@@ -29,7 +29,7 @@
             }
         }
     }
-    
+
     .skills-section {
         height: 346px;
         margin-top: 4rem;
@@ -39,12 +39,12 @@
 
         .content {
             width: 100%;
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1rem;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
 
             .skill {
-                width: 22%;
                 border: solid 1px black;
                 border-radius: 5px;
                 padding: 1rem;

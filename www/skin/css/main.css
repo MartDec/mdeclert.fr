@@ -136,12 +136,12 @@ header nav a:hover {
 }
 .home-page .skills-section .content {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 .home-page .skills-section .content .skill {
-  width: 22%;
   border: solid 1px black;
   border-radius: 5px;
   padding: 1rem;
@@ -188,6 +188,37 @@ header nav a:hover {
 }
 .resume-page .school-section .content .school .period {
   font-family: "Hammersmith One";
+}
+
+.contact-page h2 {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.contact-page .content {
+  background: #0F3342;
+  padding: 4rem;
+}
+.contact-page .content > a {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+}
+.contact-page .content > a img {
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.contact-page .content .social {
+  margin-top: 4rem;
+}
+.contact-page .content .social h2 {
+  margin: 0;
+}
+.contact-page .content .social .networks {
+  margin-top: 1rem;
+}
+.contact-page .content .social .networks a:first-child {
+  margin-right: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

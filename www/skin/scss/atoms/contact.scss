@@ -1,0 +1,39 @@
+.contact-page {
+    h2 {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        background: #0F3342;
+        padding: 4rem;
+
+        & > a {
+            display: block;
+            height: 2rem;
+            width: 2rem;
+
+            img {
+                height: 100%;
+                width: 100%;
+                color: white;
+            }
+        }
+
+        .social {
+            margin-top: 4rem;
+
+            h2 {
+                margin: 0;
+            }
+
+            .networks {
+                margin-top: 1rem;
+
+                a:first-child {
+                    margin-right: 3rem;
+                }
+            }
+        }
+    }
+}
