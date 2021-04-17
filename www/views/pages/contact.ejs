@@ -9,9 +9,29 @@
             <h1>Martin Déclert</h1>
             <div class="content">
                 <h2 class="white">Contact</h2>
-                <a href="mailto:mdeclert.dev@gmail.com">
-                    <img src="assets/icons/send.svg" alt="send mail">
-                </a>
+                <form action="#" id="email-form">
+                    <div class="input-wrapper">
+                        <div class="left">
+                            <div class="input">
+                                <label for="email" class="white">Email</label>
+                                <input type="email" name="email" id="email" placeholder="example@email.com">
+                            </div>
+                            <div class="input">
+                                <label for="user_name" class="white">Nom complet</label>
+                                <input type="text" name="fullName" id="fullName" placeholder="John Doe">
+                            </div>
+                            <div class="input">
+                                <label for="object" class="white">Objet</label>
+                                <input type="text" name="object" id="object" placeholder="Objet">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <label for="message" class="white">Message</label>
+                            <textarea name="message" id="message" placeholder="Votre message..."></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Envoyer">
+                </form>
                 <div class="social">
                     <h2 class="white">Social</h2>
                     <div class="networks">
@@ -30,6 +50,23 @@
     <nav>
         <a href="/" class="home-link">home</a>
         <a href="/resume" class="resume-link">resume</a>
-        <a href="#contact" class="conatct-link">contact</a>
+        <a href="/contact" class="contact-link">contact</a>
     </nav>
 </header>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("user_oVdNNyEw74xdbaMoyHmmG");
+    })();
+</script>
+<script type="module">
+    const form = document.querySelector('#email-form')
+    form.addEventListener('submit', function (event) {
+        event.preventDefault()
+
+        emailjs.sendForm('service_imbe9xu', 'contact_form', this, 'user_oVdNNyEw74xdbaMoyHmmG')
+            .then(response => console.log(response))
+            .catch(error => console.error(error))
+    })
+</script>

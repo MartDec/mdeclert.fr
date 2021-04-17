@@ -1,7 +1,6 @@
 require('dotenv').config()
 const express = require('express')
 const path = require('path')
-const cors = require('cors')
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT
 
@@ -15,7 +14,6 @@ class Server {
     }
 
     init () {
-        this.server.use(cors())
         this.server.use(bodyParser.urlencoded({ extended: false }))
         this.server.use(bodyParser.json())
         this.server.use(express.static('www'))
