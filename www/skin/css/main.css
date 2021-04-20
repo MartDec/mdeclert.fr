@@ -55,6 +55,18 @@ header .flex-wrapper {
 header .flex-wrapper .content {
   width: calc(100% - (111px));
   height: calc(100% - 3rem);
+  position: relative;
+}
+header .flex-wrapper .content .simpleParallax {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+header .flex-wrapper .content .simpleParallax img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 header .flex-wrapper .content .links {
   display: flex;
@@ -104,9 +116,6 @@ header nav a:hover {
   color: #0A5797;
 }
 
-.home-page header .content {
-  background: url("/assets/backgrounds/primary-bg.jpg");
-}
 .home-page header nav .home-link {
   text-decoration: underline;
 }
@@ -159,10 +168,6 @@ header nav a:hover {
   margin-top: 1rem;
 }
 
-.resume-page header .content {
-  background: url("/assets/backgrounds/resume-bg.jpg");
-  background-size: cover;
-}
 .resume-page header nav .resume-link {
   text-decoration: underline;
 }
