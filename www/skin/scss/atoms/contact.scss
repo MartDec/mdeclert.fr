@@ -1,4 +1,24 @@
 .contact-page {
+    .toast {
+        position: absolute;
+        left: 50%;
+        top: 3rem;
+        transform: translateX(-50%);
+        background: white;
+        border-radius: 5px;
+        text-align: center;
+        padding: .3rem 1rem;
+        box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+
+        &.toast-success {
+            color: #0f5132;
+        }
+
+        &.toast-error {
+            color: #842029;
+        }
+    }
+
     header {
         nav .contact-link {
             text-decoration: underline;

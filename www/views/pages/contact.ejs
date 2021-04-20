@@ -62,11 +62,36 @@
 </script>
 <script type="module">
     const form = document.querySelector('#email-form')
+
+    const displayToast = (text, success) => {
+        const className = success ? 'toast-success' : 'toast-error'
+        const toast = document.createElement('div')
+        toast.innerText = text
+        toast.classList.add('toast')
+        toast.classList.add(className)
+        document.body.appendChild(toast)
+
+        setTimeout(() => {
+            document.body.removeChild(toast)
+        }, 2000)
+    }
+
     form.addEventListener('submit', function (event) {
         event.preventDefault()
 
+        event.target.querySelector('input[type="submit"]').value = 'Envoi en cours...'
         emailjs.sendForm('service_imbe9xu', 'contact_form', this, 'user_oVdNNyEw74xdbaMoyHmmG')
-            .then(response => console.log(response))
-            .catch(error => console.error(error))
+            .then(response => {
+                if (response.text === 'OK')
+                    return true
+                else
+                    throw new Error()
+            })
+            .then(success => {
+                form.reset()
+                displayToast('Email envoyé avec succès', success)
+            })
+            .catch(error => displayToast('Une erreur est survenue pendant l\'envoi du mail', false))
+            .finally(() => event.target.querySelector('input[type="submit"]').value = 'Envoyer')
     })
 </script>
