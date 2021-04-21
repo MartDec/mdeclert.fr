@@ -15,6 +15,7 @@
 
 body {
     width: 100%;
+    min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -36,7 +37,7 @@ section {
 
 header {
     position: relative;
-    margin-top: 2rem;
+    padding-top: 2rem;
     margin-bottom: 12rem;
     height: 686px;
 }
@@ -52,3 +53,10 @@ footer {
 @import 'atoms/home';
 @import 'atoms/resume';
 @import 'atoms/contact';
+
+@media all and (max-width: 989px) {
+    section {
+        padding: 0 1rem;
+        background-image: none!important;
+    }
+}

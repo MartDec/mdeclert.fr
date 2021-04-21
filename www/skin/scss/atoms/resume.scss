@@ -12,6 +12,10 @@
             background-repeat: no-repeat;
             background-position: right;
 
+            @media all and (max-width: 989px) {
+                background-image: none!important;
+            }
+
             .experience {
                 margin-bottom: 2rem;
                 max-width: 700px;

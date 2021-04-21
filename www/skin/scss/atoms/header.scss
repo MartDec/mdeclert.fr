@@ -82,4 +82,51 @@ header {
             }
         }
     }
+
+    @media all and (max-width: 1232px) {
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    @media all and (max-width: 832px) {
+        height: 500px;
+
+        & > img {
+            width: 75%;
+        }
+
+        .right .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    @media all and (max-width: 553px) {
+        .flex-wrapper {
+            grid-template-columns: 1fr;
+
+            & > .left {
+                display: none;
+            }
+
+            .right {
+                h1 {
+                    font-size: 1.75rem;
+                }
+
+                .content {
+                    width: 100%;
+                }
+            }
+        }
+
+        nav {
+            right: 1rem;
+
+            a:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+    }
 }

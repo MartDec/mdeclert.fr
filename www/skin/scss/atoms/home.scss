@@ -11,7 +11,7 @@
         background-position: right;
 
         .content {
-            width: 700px;
+            max-width: 700px;
             margin-top: .5rem;
 
             .paragraph {
@@ -27,7 +27,6 @@
     }
 
     .skills-section {
-        height: 346px;
         margin-top: 4rem;
         background-image: url('/assets/backgrounds/skills-bg.jpg');
         background-repeat: no-repeat;
@@ -60,6 +59,18 @@
                     margin-top: 1rem;
                 }
             }
+        }
+    }
+
+    @media all and (max-width: 989px) {
+        section.skills-section .content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media all and (max-width: 680px) {
+        .skills-section .content {
+            grid-template-columns: repeat(1, 1fr)!important;
         }
     }
 }

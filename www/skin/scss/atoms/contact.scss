@@ -20,6 +20,9 @@
     }
 
     header {
+        height: auto!important;
+        margin-bottom: 14rem;
+
         nav .contact-link {
             text-decoration: underline;
         }
@@ -33,6 +36,11 @@
     .content {
         background: #0F3342;
         padding: 4rem;
+
+        * {
+            z-index: 100000;
+            position: relative;
+        }
 
         #email-form {
             .input-wrapper {
@@ -69,6 +77,20 @@
                 margin-top: 1rem;
                 cursor: pointer;
             }
+
+            @media all and (max-width: 833px) {
+                .input-wrapper {
+                    grid-template-columns: repeat(1, 1fr);
+
+                    .right {
+                        margin-top: 1rem;
+
+                        textarea {
+                            height: 100px;
+                        }
+                    }
+                }
+            }
         }
 
         .social {
@@ -81,8 +103,12 @@
             .networks {
                 margin-top: 1rem;
 
-                a:first-child {
-                    margin-right: 3rem;
+                a {
+                    text-decoration: none;
+
+                    &:first-child {
+                        margin-right: 3rem;
+                    }
                 }
             }
         }

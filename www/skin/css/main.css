@@ -14,6 +14,7 @@
 
 body {
   width: 100%;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -34,7 +35,7 @@ section h3 {
 
 header {
   position: relative;
-  margin-top: 2rem;
+  padding-top: 2rem;
   margin-bottom: 12rem;
   height: 686px;
 }
@@ -115,6 +116,45 @@ header nav a:not(:last-child) {
 header nav a:hover {
   color: #0A5797;
 }
+@media all and (max-width: 1232px) {
+  header {
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+}
+@media all and (max-width: 832px) {
+  header {
+    height: 500px;
+  }
+  header > img {
+    width: 75%;
+  }
+  header .right .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 553px) {
+  header .flex-wrapper {
+    grid-template-columns: 1fr;
+  }
+  header .flex-wrapper > .left {
+    display: none;
+  }
+  header .flex-wrapper .right h1 {
+    font-size: 1.75rem;
+  }
+  header .flex-wrapper .right .content {
+    width: 100%;
+  }
+  header nav {
+    right: 1rem;
+  }
+  header nav a:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
 
 .home-page header nav .home-link {
   text-decoration: underline;
@@ -125,7 +165,7 @@ header nav a:hover {
   background-position: right;
 }
 .home-page .hello-section .content {
-  width: 700px;
+  max-width: 700px;
   margin-top: 0.5rem;
 }
 .home-page .hello-section .content .paragraph {
@@ -137,7 +177,6 @@ header nav a:hover {
   display: block;
 }
 .home-page .skills-section {
-  height: 346px;
   margin-top: 4rem;
   background-image: url("/assets/backgrounds/skills-bg.jpg");
   background-repeat: no-repeat;
@@ -167,6 +206,16 @@ header nav a:hover {
   text-align: center;
   margin-top: 1rem;
 }
+@media all and (max-width: 989px) {
+  .home-page section.skills-section .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 680px) {
+  .home-page .skills-section .content {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
 
 .resume-page header nav .resume-link {
   text-decoration: underline;
@@ -176,6 +225,11 @@ header nav a:hover {
   background-image: url("/assets/backgrounds/professional-path-bg.jpg");
   background-repeat: no-repeat;
   background-position: right;
+}
+@media all and (max-width: 989px) {
+  .resume-page .pro-section .content {
+    background-image: none !important;
+  }
 }
 .resume-page .pro-section .content .experience {
   margin-bottom: 2rem;
@@ -212,6 +266,10 @@ header nav a:hover {
 .contact-page .toast.toast-error {
   color: #842029;
 }
+.contact-page header {
+  height: auto !important;
+  margin-bottom: 14rem;
+}
 .contact-page header nav .contact-link {
   text-decoration: underline;
 }
@@ -222,6 +280,10 @@ header nav a:hover {
 .contact-page .content {
   background: #0F3342;
   padding: 4rem;
+}
+.contact-page .content * {
+  z-index: 100000;
+  position: relative;
 }
 .contact-page .content #email-form .input-wrapper {
   display: grid;
@@ -252,6 +314,17 @@ header nav a:hover {
   margin-top: 1rem;
   cursor: pointer;
 }
+@media all and (max-width: 833px) {
+  .contact-page .content #email-form .input-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact-page .content #email-form .input-wrapper .right {
+    margin-top: 1rem;
+  }
+  .contact-page .content #email-form .input-wrapper .right textarea {
+    height: 100px;
+  }
+}
 .contact-page .content .social {
   margin-top: 4rem;
 }
@@ -261,8 +334,18 @@ header nav a:hover {
 .contact-page .content .social .networks {
   margin-top: 1rem;
 }
+.contact-page .content .social .networks a {
+  text-decoration: none;
+}
 .contact-page .content .social .networks a:first-child {
   margin-right: 3rem;
+}
+
+@media all and (max-width: 989px) {
+  section {
+    padding: 0 1rem;
+    background-image: none !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
