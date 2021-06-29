@@ -18,11 +18,14 @@ body {
     min-height: 100vh;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Hammersmith One';
 }
 
-header, section {
+header,
+section {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -45,8 +48,12 @@ header {
 footer {
     margin-top: 4rem;
     background: #202020;
-    text-align: center;
     padding: 2rem;
+    text-align: center;
+
+    &>div {
+        margin-bottom: 2rem;
+    }
 }
 
 @import 'atoms/header';
@@ -57,6 +64,6 @@ footer {
 @media all and (max-width: 989px) {
     section {
         padding: 0 1rem;
-        background-image: none!important;
+        background-image: none !important;
     }
 }

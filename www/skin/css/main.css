@@ -17,11 +17,14 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Hammersmith One";
 }
 
-header, section {
+header,
+section {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -43,8 +46,11 @@ header {
 footer {
   margin-top: 4rem;
   background: #202020;
-  text-align: center;
   padding: 2rem;
+  text-align: center;
+}
+footer > div {
+  margin-bottom: 2rem;
 }
 
 header .flex-wrapper {
@@ -172,9 +178,7 @@ header nav a:hover {
   margin-top: 1rem;
 }
 .home-page .hello-section .content a {
-  margin-top: 1rem;
   color: #0A5797;
-  display: block;
 }
 .home-page .skills-section {
   margin-top: 4rem;
@@ -220,32 +224,32 @@ header nav a:hover {
 .resume-page header nav .resume-link {
   text-decoration: underline;
 }
-.resume-page .pro-section .content {
+.resume-page #pro-section .content {
   margin-top: 1rem;
   background-image: url("/assets/backgrounds/professional-path-bg.jpg");
   background-repeat: no-repeat;
   background-position: right;
 }
 @media all and (max-width: 989px) {
-  .resume-page .pro-section .content {
+  .resume-page #pro-section .content {
     background-image: none !important;
   }
 }
-.resume-page .pro-section .content .experience {
+.resume-page #pro-section .content .experience {
   margin-bottom: 2rem;
   max-width: 700px;
 }
-.resume-page .pro-section .content .experience .period {
+.resume-page #pro-section .content .experience .period {
   font-family: "Hammersmith One";
 }
-.resume-page .school-section .content {
+.resume-page #school-section .content {
   margin-top: 1rem;
 }
-.resume-page .school-section .content .school {
+.resume-page #school-section .content .school {
   margin-bottom: 1.5rem;
   max-width: 700px;
 }
-.resume-page .school-section .content .school .period {
+.resume-page #school-section .content .school .period {
   font-family: "Hammersmith One";
 }
 
